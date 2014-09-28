@@ -3,52 +3,56 @@
 
 ##### Необходимый софт: Emacs ;-) Cask
 --------------------------------
-- Emacs : http://www.gnu.org/software/emacs/
-- Cask  : https://github.com/cask/cask
+- Emacs http://www.gnu.org/software/emacs/
+- Cask https://github.com/cask/cask
 
 #### Предварительные настройки:
 
 1. Устанавливаем Cask:
-```lisp
-    curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-    cd ~/.cask
-    cask upgrade-cask
-    export PATH="$HOME/.cask/bin:$PATH"
+```
+ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+ cd ~/.cask
+ cask upgrade-cask
+ export PATH="$HOME/.cask/bin:$PATH"
 ```
 2. В ~/.emacs.d файл конфирурации Cask с содержимым:
 ```lisp
-    (source "elpy" "http://jorgenschaefer.github.io/packages/")
-    (source gnu)
-    (source marmalade)
-    (source melpa)
-    (depends-on "cask")
-    (depends-on "pallet")
+ (source "elpy" "http://jorgenschaefer.github.io/packages/")
+ (source gnu)
+ (source marmalade)
+ (source melpa)
+ (depends-on "cask")
+ (depends-on "pallet")
 ```
 3. Устанавлимаем необходимые пакеты:
 ```
-    cd ~/.emacs.d
-    cask install
+ cd ~/.emacs.d
+ cask install
 ```
 4. Файл настройки emacs init.el (минимальный):
 ```lisp
-    (require 'cask "/home/meph/.cask/cask.el")
-    (cask-initialize)
-    (require 'pallet)
-    (mapc 'load (directory-files "/home/meph/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
+ (require 'cask "/home/meph/.cask/cask.el")
+ (cask-initialize)
+ (require 'pallet)
+ (mapc 'load (directory-files "/home/meph/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
 ```
 Необходимые телодвижения:
 ```
-mkdir -pv ~/.emacs.d/customizations ~/.emacs.d/backup-customizations ~/.emacs.d/plugins
+ mkdir -pv  ~/.emacs.d/customizations\ 
+	    ~/.emacs.d/backup-customizations\
+	    ~/.emacs.d/plugins
 ```
 *** Посматривай док-цию на пакеты: Cask & Pallet ***
 
-- Pallet : https://github.com/rdallasgray/pallet
-- Cask   : https://github.com/cask/cask
+- Pallet https://github.com/rdallasgray/pallet
+- Cask https://github.com/cask/cask
 
 *В emacs, периодически: pallet-update
 (см. также: pallet-init pallet-install)
 *В шелл, периодически: 
 ```
-cask outdated, cask update, cask [upgrade-cask|upgrade]
+ cask outdated
+ cask update
+ cask [upgrade-cask|upgrade]
 ```
 PS: Pallet устанавливается через emacs package system (cask позаботится ;)
