@@ -2,7 +2,7 @@
 ### Текущая конфигурация emacs
 ------------------------------
 
-**Клонируем: git clone git://github.com/algerbo/emacs-config.git ~/.emcas.d**
+>Клонируем: git clone git://github.com/algerbo/emacs-config.git ~/.emcas.d
 
 ##### Необходимый софт: Emacs ;-) Cask
 
