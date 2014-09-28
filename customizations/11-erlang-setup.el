@@ -30,6 +30,7 @@
 (add-to-list 'auto-mode-alist '(".*\\.config\\'" . erlang-mode))
 (add-to-list 'auto-mode-alist '(".*\\.rel\\'" . erlang-mode))
 (add-to-list 'auto-mode-alist '(".*\\.script\\'" . erlang-mode))
+(add-to-list 'auto-mode-alist '("Emakefile?$" . erlang-mode))
 
 (add-hook
  'erlang-mode-hook
