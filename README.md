@@ -3,9 +3,9 @@
 
 ##### Необходимый софт: Emacs ;-) Cask
 ------------------------------------------
+
 - Emacs http://www.gnu.org/software/emacs
 - Cask https://github.com/cask/cask
-------------------------------------------
 
 #### Предварительные настройки:
 
@@ -38,7 +38,7 @@
  (mapc 'load (directory-files "/home/meph/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
 ```
 
-###### Необходимые телодвижения:
+#### Необходимые телодвижения:
 ```
  mkdir -pv  ~/.emacs.d/customizations\ 
 	    ~/.emacs.d/backup-customizations\
@@ -50,16 +50,16 @@
 - Pallet https://github.com/rdallasgray/pallet
 - Cask https://github.com/cask/cask
 
-В emacs: 
+>В emacs: 
 ```
 pallet-update
 (см. также: pallet-init pallet-install)
 ```
-В шелл: 
+>В шелл: 
 ```
  cask outdated
  cask update
  cask [upgrade-cask|upgrade]
 ```
 
-PS: Pallet устанавливается через emacs package system (cask позаботится ;)
+ **PS: Pallet устанавливается через emacs package system (cask позаботится ;)**
