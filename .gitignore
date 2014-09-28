@@ -1,0 +1,13 @@
+.*
+*~
+~*
+addons
+auto-save-list
+.cask
+backup-customizations/*~
+customizations/*~
+plugins
+*.txt
+*/*.elc
+!.gitignore
+
