@@ -1,3 +1,4 @@
+!.gitignore
 .*
 *~
 ~*
@@ -9,5 +10,4 @@ customizations/*~
 plugins
 *.txt
 */*.elc
-!.gitignore
 
