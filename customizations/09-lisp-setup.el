@@ -43,28 +43,28 @@
 (setq inferior-lisp-program "/usr/local/bin/sbcl --noinform --no-linedit")
 
 (eval-after-load
- 'slime
- '(progn
-   (setq common-lisp-hyperspec-root "file:///home/meph/0LISP/HyperSpec/")
-   (setq common-lisp-hyperspec-symbol-table "file:///home/meph/0LISP/HyperSpec/Data/Map_Sym.txt")
-   (setq slime-scratch-file "/home/meph/0LISP/tmp/scratch.lisp")
-   (setq slime-edit-definition-fallback-function 'find-tag)
-   (setq slime-complete-symbol*-fancy t)
-   (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
-   (setq slime-when-complete-filename-expand t)
-   (setq slime-truncate-lines nil)
-   (setq slime-autodoc-use-multiline-p t)
-   (setq slime-load-failed-fasl 'never)
-   ;;(setq slime-highlight-edits-mode t)
-   ;;(set-face-background 'slime-highlight-edits-face "dark turquoise")
-   ;;(set-face-foreground 'slime-highlight-edits-face "red")
-   (setq slime-autodoc-mode t)
-   (setq slime-repl-history-remove-duplicates t)
-   (setq slime-highlight-compiler-notes t)
-   (setq slime-repl-history-trim-whitespaces nil)))
+    'slime
+  '(progn
+     (setq common-lisp-hyperspec-root "file:///home/meph/0LISP/HyperSpec/")
+     (setq common-lisp-hyperspec-symbol-table "file:///home/meph/0LISP/HyperSpec/Data/Map_Sym.txt")
+     (setq slime-scratch-file "/home/meph/0LISP/tmp/scratch.lisp")
+     (setq slime-edit-definition-fallback-function 'find-tag)
+     (setq slime-complete-symbol*-fancy t)
+     (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
+     (setq slime-when-complete-filename-expand t)
+     (setq slime-truncate-lines nil)
+     (setq slime-autodoc-use-multiline-p t)
+     (setq slime-load-failed-fasl 'never)
+     ;;(setq slime-highlight-edits-mode t)
+     ;;(set-face-background 'slime-highlight-edits-face "dark turquoise")
+     ;;(set-face-foreground 'slime-highlight-edits-face "red")
+     (setq slime-autodoc-mode t)
+     (setq slime-repl-history-remove-duplicates t)
+     (setq slime-highlight-compiler-notes t)
+     (setq slime-repl-history-trim-whitespaces nil)))
 
 (define-key slime-mode-map
-    (kbd "TAB") 'slime-indent-and-complete-symbol)
+  (kbd "TAB") 'slime-indent-and-complete-symbol)
 
 (add-hook 'lisp-mode-hook
           (lambda ()
@@ -101,7 +101,7 @@
   (let ((browse-url-browser-function 'w3m-browse-url))
     (if symbol-name
         (common-lisp-hyperspec symbol-name)
-        (call-interactively 'common-lisp-hyperspec))))
+      (call-interactively 'common-lisp-hyperspec))))
 
 ;;; Автокомплит
 ;;; Доп. пакеты MELPA:
@@ -112,10 +112,16 @@
 (require 'fuzzy)
 (require 'pos-tip)
 
+(add-hook 'lisp-mode-hook 'set-up-slime-ac)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+
 (eval-after-load "auto-complete"
-                 '(add-to-list 'ac-modes 'slime-repl-mode))
+  '(add-to-list 'ac-modes 'slime-repl-mode))
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'slime-mode))
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'lisp-mode))
 
 ;;; Улучшаем "качество" вып.меню
 ;;; http://www.emacswiki.org/emacs-en/PosTip
@@ -132,12 +138,12 @@
                         (if (popup-hidden-p menu)
                             (or (plist-get args :point)
                                 (point))
-                            (overlay-end (popup-line-overlay
-                                          menu (+ (popup-offset menu)
-                                                  (popup-selected-line menu)))))
+                          (overlay-end (popup-line-overlay
+                                        menu (+ (popup-offset menu)
+                                                (popup-selected-line menu)))))
                         nil 0)
           nil))
-      ad-do-it))
+    ad-do-it))
 
 ;;;
 (provide '09-lisp-setup)
