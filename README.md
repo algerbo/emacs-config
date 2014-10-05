@@ -43,7 +43,7 @@ git clone git://github.com/algerbo/emacs-config.git ~/.emcas.d
  (mapc 'load (directory-files "/home/meph/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
 ```
 
-#### Необходимые телодвижения:
+#### Необходимые "телодвижения":)
 ```bash
  mkdir -pv  ~/.emacs.d/customizations\ 
 	    ~/.emacs.d/backup-customizations\
