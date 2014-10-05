@@ -51,10 +51,10 @@ git clone git://github.com/algerbo/emacs-config.git ~/.emcas.d
 ```
 
 >Посматривай док-цию на пакеты: Cask & Pallet
-
-- Pallet https://github.com/rdallasgray/pallet
-- Cask https://github.com/cask/cask
-
+>
+> - Pallet https://github.com/rdallasgray/pallet
+> - Cask https://github.com/cask/cask
+>
 >В emacs:
 ```
 pallet-update
