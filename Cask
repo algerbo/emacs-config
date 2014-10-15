@@ -2,6 +2,7 @@
 (source gnu)
 (source marmalade)
 (source melpa)
+(source org)
 
 (depends-on "ac-slime")
 (depends-on "auto-complete")
@@ -25,4 +26,5 @@
 (depends-on "powerline")
 (depends-on "s")
 (depends-on "shut-up")
+(depends-on "slime")
 (depends-on "smex")
