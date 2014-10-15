@@ -7,6 +7,6 @@ auto-save-list
 .cask
 backup-customizations/*~
 customizations/*~
-plugins
+plugins/*
 *.txt
 */*.elc
