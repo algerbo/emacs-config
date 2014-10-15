@@ -5,7 +5,7 @@
 ;; load configuration files from here...
 (mapc 'load (directory-files "/home/meph/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
 
-;;; ### Ниже Emacs гадит... >=|;o)~ ###
+;;; ### Следующие строки - это Emacs гадит... >=|;o)~ ###
 
 
 
