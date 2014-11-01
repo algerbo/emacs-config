@@ -71,11 +71,14 @@
 (set-face-attribute  'show-paren-mismatch-face nil
                      :weight 'bold :underline nil :overline nil :slant 'italic)
 
-;;; Автоматически добавлять парый символ \", \{, \(, \[
+;;; Автоматически добавлять парый символ \", \{, \(, \[ & etc.
 ;;; http://ergoemacs.org/emacs/emacs_insert_brackets_by_pair.html
 (electric-pair-mode t)
 (setq-default electric-pair-pairs
               '((?\" . ?\")
+                (?\' . ?\')
+                (?\< . ?\>)
+                (?\` . ?\`)
                 (?\[ . ?\])
                 (?\{ . ?\})
                 (?\( . ?\))))
