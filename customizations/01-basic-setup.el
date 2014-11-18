@@ -17,7 +17,7 @@
 (setq visible-bell nil
       ring-bell-function 'my-terminal-visible-bell)
 
-;;; For TRUE Emacs HACKERZzz... ;-)
+;;; 4 R3Al Emacs hacker-Zzz... ;-)
 ;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))

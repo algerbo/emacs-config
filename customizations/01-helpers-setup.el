@@ -76,7 +76,7 @@
 (electric-pair-mode t)
 (setq-default electric-pair-pairs
               '((?\" . ?\")
-                (?\' . ?\')
+                ;;(?\' . ?\')
                 ;;(?\< . ?\>)
                 (?\` . ?\`)
                 (?\[ . ?\])
