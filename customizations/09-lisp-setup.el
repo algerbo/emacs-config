@@ -5,8 +5,11 @@
 ;;; при установке через QuickLisp:
 ;;(load (expand-file-name "~/0LISP/QUICKLISP/slime-helper.el"))
 
+;;; при установке через Git
 (add-to-list 'load-path "/home/meph/.emacs.d/plugins/slime")
 (require 'slime-autoloads)
+
+;;; НАСТРОЙКИ ->
 
 (setq auto-mode-alist
       (append '(("\\.lisp$"   . lisp-mode)
@@ -18,6 +21,7 @@
 
 (slime-setup '(slime-asdf
                slime-autodoc
+               slime-banner
                slime-editing-commands
                slime-fancy
                slime-fancy-inspector
