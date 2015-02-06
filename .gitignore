@@ -5,6 +5,7 @@
 addons
 auto-save-list
 .cask
+*.bak
 backup-customizations/*~
 customizations/*~
 plugins/*
