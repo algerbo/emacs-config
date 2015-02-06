@@ -49,6 +49,9 @@
 ;;; Не мигать курсором
 (blink-cursor-mode 0)
 
+;;; величина скроллинга
+(setq scroll-step 1)
+
 ;;; Вместо yes/no вводим y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -93,6 +96,10 @@
 (global-whitespace-mode t)
 (setq-default show-trailing-whitespace t)
 (setq-default indicate-empty-lines t)
+
+;;; автосохранение
+(setq auto-save-interval 180)
+(setq auto-save-timeout   30)
 
 ;;; чистимся...
 (defun cleaning-garbage ()
