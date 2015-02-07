@@ -28,7 +28,7 @@
                slime-fontifying-fu
                slime-fuzzy
                slime-indentation
-               ;;slime-mdot-fu ;; not implemented yet!
+               ;;slime-mdot-fu ;; Not implemented. error: This contrib does not work at the moment.
                ;;slime-highlight-edits
                slime-package-fu
                slime-references
