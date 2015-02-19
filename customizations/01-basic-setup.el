@@ -5,6 +5,17 @@
 ;;; сплашскрин убрать!
 (setq inhibit-splash-screen t)
 
+;;; В буфер *scratch* отобразим "свои" биндинги
+;;(setq initial-scratch-message "")
+(defun prepare-scratch-buffer ()
+  (let ((file (concat (getenv "HOME") "/.emacs.d/Cheatsheet")))
+    (when (file-exists-p file)
+      (set-buffer (get-buffer "*scratch*"))
+      (erase-buffer)
+      (insert-file-contents file)
+      (read-only-mode t))))
+(prepare-scratch-buffer)
+
 ;;; Визуальная индикация "исключений", пр.: 'C-g'
 ;;; "умолчальный вариант"
 ;;(setq visible-bell t)

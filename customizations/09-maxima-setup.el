@@ -2,10 +2,12 @@
 
 (add-to-list
  'load-path
- (car (file-expand-wildcards "/home/meph/0LISP/0MAXIMA/share/maxima/*/emacs")))
+ (car (file-expand-wildcards
+       (concat (getenv "HOME") "/0LISP/0MAXIMA/share/maxima/*/emacs"))))
 
-(setq exec-path (append exec-path '("/home/meph/0LISP/0MAXIMA/bin")))
-(setenv "PATH" (concat (getenv "PATH") ":/home/meph/0LISP/0MAXIMA/bin"))
+(add-to-list
+ 'exec-path
+ (concat (getenv "HOME") "/0LISP/0MAXIMA/bin"))
 
 (autoload 'imaxima "imaxima" "Frontend for maxima with Image support" t)
 (autoload 'maxima "maxima" "Maxima interaction" t)
@@ -21,9 +23,10 @@
 ;; Info dir
 ;; http://www.emacswiki.org/emacs/InfoMode
 ;; C-h i ...
-(setq Info-default-directory-list
-      (append Info-default-directory-list
-              '("/home/meph/0LISP/0MAXIMA/share/info")))
+
+(add-to-list
+ 'Info-additional-directory-list
+ (expand-file-name (concat (getenv "HOME") "/0LISP/0MAXIMA/share/info")))
 
 (add-hook 'inferior-maxima-mode-hook
           (lambda ()

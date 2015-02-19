@@ -13,8 +13,10 @@
 
 ;;; --- cut ---
 
+;;; Стоит посмотреть на схемы: http://wikemacs.org/wiki/Themes
+
 ;;; Временно...
-;;; (не цветовая схема)
+;;; (не цветовая схема, просто раскраска...)
 ;;; https://functionalrants.wordpress.com/2008/09/06/how-to-set-up-emacs-slime-sbcl-under-gnulinux/
 
 (defun faces_x ()

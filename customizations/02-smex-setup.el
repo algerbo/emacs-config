@@ -11,7 +11,7 @@
 
 ;;; Не засорять ненужным хламом ;-)
 (setq smex-history-length 0)
-(setq smex-save-file "/home/meph/.emacs.d/.smex-items")
+(setq smex-save-file (concat (getenv "HOME") "/.emacs.d/.smex-items"))
 
 (setq smex-prompt-string "smex -> ")
 (setq smex-show-unbound-commands t)

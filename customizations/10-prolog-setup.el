@@ -12,8 +12,8 @@
               '((swi ("-G128M" "-T128M" "-L128M" "-O"))
                 (t nil)))
 
-(setq prolog-inferior "/home/meph/0PROLOG/bin/swipl")
-(setq prolog-program-name "/home/meph/0PROLOG/bin/swipl")
+(setq prolog-inferior (concat (getenv "HOME") "/0PROLOG/bin/swipl"))
+(setq prolog-program-name (concat (getenv "HOME") "/0PROLOG/bin/swipl"))
 
 (setq auto-mode-alist
       (append

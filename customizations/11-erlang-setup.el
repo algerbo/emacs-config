@@ -3,8 +3,8 @@
 ;;; WRANGLER: git clone git://github.com/RefactoringTools/wrangler.git
 
 ;;; Обязательно добавить в $HOME/.erlang file
-;;; code:add_patha("/home/meph/.emacs.d/plugins/distel/ebin").
-;;; code:add_path("/home/meph/.emacs.d/plugins/wrangler/ebin").
+;;; code:add_patha("~/.emacs.d/plugins/distel/ebin").
+;;; code:add_path("~/.emacs.d/plugins/wrangler/ebin").
 
 ;;; FIXME: проблемы distel и wrangler. Несовместимость! ;(
 
@@ -59,7 +59,7 @@
 
 ;;; Настройки Distel
 
-(add-to-list 'load-path "/home/meph/.emacs.d/plugins/distel/elisp")
+(add-to-list 'load-path (concat (getenv "HOME") "/.emacs.d/plugins/distel/elisp"))
 
 (require 'distel)
 
@@ -76,9 +76,10 @@
 ;; Info dir
 ;; http://www.emacswiki.org/emacs/InfoMode
 ;; C-h i ...
-(setq Info-default-directory-list
-      (append Info-default-directory-list
-              '("/home/meph/.emacs.d/plugins/distel/doc")))
+
+(add-to-list
+ 'Info-additional-directory-list
+(expand-file-name (concat (getenv "HOME") "/.emacs.d/plugins/distel/doc")))
 
 (defconst distel-shell-keys
   '(("\C-\M-i"   erl-complete)
@@ -93,20 +94,13 @@
 
 ;;; (Де-)активировать Wrangler: Ctrl-c Ctrl-r
 
-;; (add-to-list 'load-path "/home/meph/.emacs.d/plugins/wrangler/elisp")
+;; (add-to-list 'load-path "~/.emacs.d/plugins/wrangler/elisp")
 
 ;; (require 'wrangler)
 
 ;; (load-library "graphviz-dot-mode")
 ;; (setq graphviz-dot-view-command "xdot %s")
 ;; ;;(setq wrangler-search-paths "/usr/lib/erlang/lib")
-
-;; ;; Info dir
-;; ;; http://www.emacswiki.org/emacs/InfoMode
-;; ;; C-h i ...
-;; (setq Info-default-directory-list
-;;       (append Info-default-directory-list
-;;               '("/home/meph/.emacs.d/plugins/wrangler/doc")))
 
 ;;;
 (provide '11-erlang-setup)

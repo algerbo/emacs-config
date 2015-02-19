@@ -6,7 +6,7 @@
 ;;(load (expand-file-name "~/0LISP/QUICKLISP/slime-helper.el"))
 
 ;;; при установке через Git
-(add-to-list 'load-path "/home/meph/.emacs.d/plugins/slime")
+(add-to-list 'load-path (concat (getenv "HOME") "/.emacs.d/plugins/slime"))
 (require 'slime-autoloads)
 
 ;;; НАСТРОЙКИ ->
@@ -49,9 +49,9 @@
 (eval-after-load
     'slime
   '(progn
-     (setq common-lisp-hyperspec-root "file:///home/meph/0LISP/HyperSpec/")
-     (setq common-lisp-hyperspec-symbol-table "file:///home/meph/0LISP/HyperSpec/Data/Map_Sym.txt")
-     (setq slime-scratch-file "/home/meph/0LISP/tmp/scratch.lisp")
+     (setq common-lisp-hyperspec-root (concat "file://" (getenv "HOME") "/0LISP/HyperSpec/"))
+     (setq common-lisp-hyperspec-symbol-table (concat "file://" (getenv "HOME") "/0LISP/HyperSpec/Data/Map_Sym.txt"))
+     (setq slime-scratch-file (concat (getenv "HOME") "/0LISP/tmp/scratch.lisp"))
      (setq slime-edit-definition-fallback-function 'find-tag)
      (setq slime-complete-symbol*-fancy t)
      (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)
