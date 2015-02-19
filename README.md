@@ -37,10 +37,10 @@ git clone git://github.com/algerbo/emacs-config.git ~/.emcas.d
 ```
 4 Файл настройки emacs init.el (минимальный):
 ```lisp
- (require 'cask "/home/meph/.cask/cask.el")
+ (require 'cask "~/.cask/cask.el")
  (cask-initialize)
  (require 'pallet)
- (mapc 'load (directory-files "/home/meph/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
+ (mapc 'load (directory-files "~/.emacs.d/customizations" t "^[0-9]+.*\.el$"))
 ```
 
 #### Необходимые "телодвижения":)
