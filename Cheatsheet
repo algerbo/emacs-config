@@ -1,0 +1,79 @@
+
+Клавиатурные биндинги, памятка по стандартным:
+
+                M-<
+                document
+                M-v
+                screen
+                C-p
+                line
+C-a   M-b  C-b  C-l    C-f  M-f  C-e
+begin word char center char word end
+                C-n
+                line
+                C-v
+                screen
+                M->
+                document
+
+----------------------------------------------
+
+   C-x-u (C-/) Undo
+   C-w         Cut
+   M-w         Copy
+   C-y         Paste
+   C-x-h       Select all
+
+   C-x 40      Kill buffer and window
+   C-x 4 C-f  | Switch to another file
+   C-x 4 f    | and show it in another window
+
+   C-x C-f     Open file
+   C-x C-s     Save file
+   C-x-s       Save all opened files
+   C-x C-w     Save another name
+   C-x-i       Insert file into curr buffer
+   C-x C-l     Replace another file
+   C-x C-q     Toggle read only
+   C-x C-r     Open file with RO attr.
+
+----------------------------------------------
+
+   C-x ->|<-  |переход между buffer
+   C-x C->|<- |курсорн. клавиши: лев., прав.
+
+   C-x-o      Переход между окнами.
+   M-U,D,R,L  курсор.клав. Up,Down,Left,Right
+
+----------------------------------------------
+
+Мои биндинги:
+
+   C-c C-[курсорн.клав.] Меняем размер окна
+
+   C-x C-[-,=] |Меняем размер шрифта (GUI)
+   C-x C-0     |сбросить по умолчанию
+
+   C-M-;       (un-)comment выделен. регион
+   C-c-r       Переим. текущ. файл и буф.
+   C-M-\       Формат. в завис. от curr mode
+   C-c-E       Полностью очистить текущ. буф.
+
+   C-x-m       Открыть ссылку под курсором WWW
+   C-x-g       Поиск в Google
+   C-x-w       Поиск в Wiki
+
+----------------------------------------------
+
+  TODO: Биндинги для работы с LISP & SLIME:
+----------------------------------------------
+  TODO: Биндинги для работы с ERLANG:
+----------------------------------------------
+  TODO: Биндинги для работы с PROLOG:
+----------------------------------------------
+  TODO: Биндинги для работы с MAXIMA:
+----------------------------------------------
+  TODO: Биндинги для работы с GIT:
+----------------------------------------------
+  TODO: Биндинги для работы с GDB:
+----------------------------------------------
