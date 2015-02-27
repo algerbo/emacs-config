@@ -2,8 +2,10 @@
 ;;; Базовые настройки.
 ;;;
 
-;;; сплашскрин убрать!
+;;; нет сплашскрину ;-) 
 (setq inhibit-splash-screen t)
+;;; "чистая" echo area при старте
+(setq inhibit-startup-echo-area-message t)
 
 ;;; В буфер *scratch* отобразим "свои" биндинги
 ;;(setq initial-scratch-message "")
