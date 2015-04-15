@@ -6,7 +6,8 @@
 ;;(load (expand-file-name "~/0LISP/QUICKLISP/slime-helper.el"))
 
 ;;; при установке через Git
-(add-to-list 'load-path (concat (getenv "HOME") "/.emacs.d/plugins/slime"))
+;(add-to-list 'load-path (concat (getenv "HOME") "/.emacs.d/plugins/slime"))
+;;; предыдущие телодвижения лишние :-( ac-slime тянет за собой slime :-(
 (require 'slime-autoloads)
 
 ;;; НАСТРОЙКИ ->
