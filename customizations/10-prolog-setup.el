@@ -6,6 +6,7 @@
 
 (autoload 'run-prolog "prolog" "Start a Prolog sub-process." t)
 (autoload 'prolog-mode "prolog" "Major mode for editing Prolog programs." t)
+;;; FIXME: проблема с переменными окружения. (надо посмотреть сырцы...)
 ;;; !!! export EPROLOG=/path/to/swipl/binary
 (setq-default prolog-system 'swi
               prolog-program-switches
