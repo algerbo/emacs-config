@@ -4,7 +4,7 @@
 
 >Памятка (клонируем на "свежий комп"):
 ```bash
-git clone git://github.com/algerbo/emacs-config.git ~/.emcas.d
+git clone git://github.com/algerbo/emacs-config.git ~/.emacs.d
 ```
 
 ##### Необходимый софт: Emacs ;-) Cask
