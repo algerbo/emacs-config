@@ -98,12 +98,13 @@
 (add-hook 'slime-load-hook 'hlp-custom-keys)
 
 ;;; Док-цию смотрим в w3m
-
+;;; REVIEW: последние версии emacs имеют встроенную поддержку eww ("новый www browsser")
+;;;         see to: /path/to/sources/emacs-x/lisp/net/eww.el
 (require 'hyperspec)
 
 (defun hyperspec-lookup (&optional symbol-name)
   (interactive)
-  (let ((browse-url-browser-function 'w3m-browse-url))
+  (let ((browse-url-browser-function 'eww-browse-url)) ;;; 'w3m-browse-url))
     (if symbol-name
         (common-lisp-hyperspec symbol-name)
       (call-interactively 'common-lisp-hyperspec))))
