@@ -11,3 +11,4 @@ customizations/*~
 plugins/*
 *.txt
 */*.elc
+url
