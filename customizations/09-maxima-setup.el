@@ -33,6 +33,7 @@
             (local-set-key (kbd "TAB") 'maxima-complete)))
 
 (add-to-list 'auto-mode-alist '("\\.ma[cx]" . maxima-mode))
+(add-to-list 'auto-mode-alist '("\\.maxima" . maxima-mode))
 
 ;;;
 (provide '09-maxima-setup)
