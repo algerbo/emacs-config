@@ -45,7 +45,13 @@
 (setq slime-net-coding-system 'utf-8-unix)
 
 ;;; --no-linedit этот пакет для удобства при работе в терминеле К.С.
-(setq inferior-lisp-program "/usr/local/bin/sbcl --noinform --no-linedit")
+;(setq inferior-lisp-program "/usr/local/bin/sbcl --noinform --no-linedit")
+;; выбор лиспа при запуске слима: M-- M-x slime
+(setq slime-lisp-implementations
+      '((clozure ("/home/meph/bin/clozure" "-K utf-8") :coding-system utf-8-unix)
+        (sbcl ("/usr/local/bin/sbcl" "--noinform --no-linedit") :coding-system utf-8-unix)))
+;; по-умолчанию (старт slime без префикса) M-x slime стартонем SBCL
+(setf slime-default-lisp 'sbcl)
 
 (eval-after-load
     'slime
@@ -60,6 +66,7 @@
      (setq slime-truncate-lines nil)
      (setq slime-autodoc-use-multiline-p t)
      (setq slime-load-failed-fasl 'never)
+     ;; подсвечиваем "измененные строки" ;-)
      ;;(setq slime-highlight-edits-mode t)
      ;;(set-face-background 'slime-highlight-edits-face "dark turquoise")
      ;;(set-face-foreground 'slime-highlight-edits-face "red")
@@ -98,7 +105,7 @@
 (add-hook 'slime-load-hook 'hlp-custom-keys)
 
 ;;; Док-цию смотрим в w3m
-;;; REVIEW: последние версии emacs имеют встроенную поддержку eww ("новый www browsser")
+;;; REVIEW: последние версии emacs имеют встроенную поддержку eww ("новый www browser")
 ;;;         see to: /path/to/sources/emacs-x/lisp/net/eww.el
 (require 'hyperspec)
 
