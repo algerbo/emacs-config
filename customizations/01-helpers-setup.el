@@ -73,15 +73,15 @@
 
 ;;; Автоматически добавлять парый символ \", \{, \(, \[ & etc.
 ;;; http://ergoemacs.org/emacs/emacs_insert_brackets_by_pair.html
-(electric-pair-mode t)
-(setq-default electric-pair-pairs
-              '((?\" . ?\")
-                ;;(?\' . ?\')
-                ;;(?\< . ?\>)
-                (?\` . ?\`)
-                (?\[ . ?\])
-                (?\{ . ?\})
-                (?\( . ?\))))
+;;(electric-pair-mode t)
+;;(setq-default electric-pair-pairs
+;;              '((?\" . ?\")
+;;                (?\' . ?\')
+;;                (?\< . ?\>)
+;;                (?\` . ?\`)
+;;                (?\[ . ?\])
+;;                (?\( . ?\))
+;;                (?\{ . ?\})))
 
 ;;; Если в текущем режиме создается iMenu,
 ;;; биндим его выхов на <Win>-i
