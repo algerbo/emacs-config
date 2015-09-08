@@ -84,7 +84,7 @@
 ;;                (?\{ . ?\})))
 
 ;;; Если в текущем режиме создается iMenu,
-;;; биндим его выхов на <Win>-i
+;;; биндим его вызов на <Win>-i
 ;;; FIX: under MacOSX ?
 ;;; if OSX... (if (equal window-system 'ns) (...))
 (global-set-key [(super ?i)] 'imenu)
