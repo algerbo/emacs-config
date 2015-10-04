@@ -6,6 +6,8 @@
 (setq inhibit-splash-screen t)
 ;;; "чистая" echo area при старте
 (setq inhibit-startup-echo-area-message t)
+;;; ни каких приветствий ;-)
+(setq inhibit-startup-message t)
 
 ;;; В буфер *scratch* отобразим "свои" биндинги
 ;;(setq initial-scratch-message "")
