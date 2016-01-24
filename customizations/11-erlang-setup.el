@@ -102,6 +102,36 @@
 ;; (setq graphviz-dot-view-command "xdot %s")
 ;; ;;(setq wrangler-search-paths "/usr/lib/erlang/lib")
 
+
+;;; Elixir ;-) (draft version)
+
+;; TODO:
+;; Почитать "спеки" для тонкой настройки
+;; company mode - как связка для автокомплита и прочих плюшек
+;; https://company-mode.github.io/
+;; https://github.com/company-mode/company-mode
+
+;; http://www.alchemist-elixir.org/
+;; https://github.com/tonini/alchemist.el
+
+;; alchemist via MELP
+(setq alchemist-mix-command "/usr/local/bin/mix")
+(setq alchemist-iex-program-name "/usr/local/bin/iex")
+(setq alchemist-execute-command "/usr/local/bin/elixir")
+(setq alchemist-compile-command "/usr/local/bin/elixirc")
+(setq alchemist-mix-test-default-options '())
+;;(setq alchemist-mix-test-task "espec") ;; <--- TODO: read docs!
+(setq alchemist-test-status-modeline t)
+(setq alchemist-test-mode-highlight-tests t)
+(setq alchemist-test-ask-about-save nil)
+(setq alchemist-test-status-modeline t)
+(setq alchemist-test-display-compilation-output t)
+(setq alchemist-hooks-test-on-save nil) ;; <--- TODO: read docs!
+;; ac-alchemist via MELPA
+(add-hook 'elixir-mode-hook 'ac-alchemist-setup)
+;;; ---
+
+
 ;;;
 (provide '11-erlang-setup)
 ;;; END here
