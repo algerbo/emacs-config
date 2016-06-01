@@ -35,7 +35,7 @@
     (global-set-key (kbd "C-=") nil)
     (global-set-key (kbd "C--") nil)))
 
-;;; (за\рас)комментировать выделенный регион 'C-M-;'
+;;; (за\раз)комментировать выделенный регион 'C-M-;'
 ;;; http://rigidus.ru/articles/comment-and-search
 (defun comment-or-uncomment-this (&optional lines)
   (interactive "P")
