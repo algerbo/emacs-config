@@ -50,7 +50,7 @@ git clone git://github.com/algerbo/emacs-config.git ~/.emacs.d
 	    ~/.emacs.d/plugins
 ```
 
->Посматривай док-цию на пакеты: Cask & Pallet
+>Посматривай в док-цию на пакеты: Cask & Pallet
 >
 > - Pallet https://github.com/rdallasgray/pallet
 > - Cask https://github.com/cask/cask
